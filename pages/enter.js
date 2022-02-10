@@ -3,6 +3,8 @@ import { UserContext } from "../lib/context";
 
 import { useEffect, useState, useCallback, useContext } from "react";
 import debounce from "lodash.debounce";
+import Metatags from "../components/Metatags";
+import { useRouter } from "next/router";
 
 export default function Enter(props) {
   const { user, username } = useContext(UserContext);
@@ -12,6 +14,7 @@ export default function Enter(props) {
   // 3. user signed in, has username <SignOutButton />
   return (
     <main>
+      <Metatags title="Enter" description="Sign up for this amazing app!" />
       {user ? (
         !username ? (
           <UsernameForm />
@@ -27,8 +30,11 @@ export default function Enter(props) {
 
 // Sign in with Google button
 function SignInButton() {
+  const router = useRouter();
+
   const signInWithGoogle = async () => {
     await auth.signInWithPopup(googleAuthProvider);
+    router.push("/");
   };
 
   return (
@@ -36,9 +42,9 @@ function SignInButton() {
       <button className="btn-google" onClick={signInWithGoogle}>
         <img src={"/google.png"} width="30px" /> Sign in with Google
       </button>
-      {/* <button onClick={() => auth.signInAnonymously()}>
+      <button onClick={() => auth.signInAnonymously()}>
         Sign in Anonymously
-      </button> */}
+      </button>
     </>
   );
 }

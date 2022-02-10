@@ -1,3 +1,4 @@
+// UI component for user profile
 export default function UserProfile({ user }) {
   return (
     <div className="box-center">
@@ -5,7 +6,7 @@ export default function UserProfile({ user }) {
       <p>
         <i>@{user.username}</i>
       </p>
-      <h1>{user.displayName}</h1>
+      <h1>{user.displayName || "Anonymous User"}</h1>
     </div>
   );
 }
