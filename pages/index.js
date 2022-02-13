@@ -81,7 +81,9 @@ export default function Home(props) {
 
       <Loader show={loading} />
 
-      {postsEnd && "You have reached the end!"}
+      <div className="above-footer">
+        {postsEnd && "You have reached the end!"}
+      </div>
     </main>
   );
 }
