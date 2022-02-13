@@ -275,7 +275,7 @@ input[type="file"] {
 .footer {
   margin-top: 1rem;
   padding: 0.2rem;
-  background-color: rgb(75, 64, 235);
+  background-color: #3b49df;
   font-size: 12px;
   font-weight: 550;
   color: #fff;
@@ -284,4 +284,9 @@ input[type="file"] {
   bottom: 0;
   left: 0;
   width: 100%;
+}
+
+.text-small {
+  font-size: 12px;
+  font-style: italic;
 }
