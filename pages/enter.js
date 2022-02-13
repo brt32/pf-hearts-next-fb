@@ -20,7 +20,7 @@ export default function Enter(props) {
         !username ? (
           <UsernameForm />
         ) : (
-          <SignOutButton />
+          <UsernameExists />
         )
       ) : (
         <SignInButton />
@@ -50,6 +50,12 @@ function SignInButton() {
 // Sign out button
 function SignOutButton() {
   return <button onClick={() => auth.signOut()}>Sign Out</button>;
+}
+
+function UsernameExists() {
+  const router = useRouter();
+  router.push("/");
+  return <h2>Redirecting...</h2>;
 }
 
 // Username form

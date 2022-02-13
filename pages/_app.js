@@ -3,6 +3,7 @@ import Navbar from "../components/Navbar";
 import "../styles/globals.css";
 import { UserContext } from "../lib/context";
 import { useUserData } from "../lib/hooks";
+import Footer from "../components/Footer";
 
 function MyApp({ Component, pageProps }) {
   const userData = useUserData();
@@ -12,6 +13,7 @@ function MyApp({ Component, pageProps }) {
       <Navbar />
       <Component {...pageProps} />
       <Toaster />
+      <Footer />
     </UserContext.Provider>
   );
 }

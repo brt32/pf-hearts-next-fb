@@ -68,8 +68,8 @@ export default function Home(props) {
         <p>Welcome! This app is inspired by Dev.to.</p>
         <p>
           Sign up for an 👨‍🎤 account, ✍️ write posts, then 💞 HEART content
-          created by other users. All public content is server-rendered and
-          search-engine optimized.
+          created by other users. All public content is server-side rendered
+          (SSR) and search-engine optimized (SEO).
         </p>
       </div>
 

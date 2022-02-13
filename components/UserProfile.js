@@ -5,6 +5,10 @@ export default function UserProfile({ user }) {
       <img src={user.photoURL || "/hacker.png"} className="card-img-center" />
       <p>
         <i>@{user.username}</i>
+        <p>
+          Do you want to change your username? Haha, it is imposible right now!
+          Maybe later...
+        </p>
       </p>
       <h1>{user.displayName || "Anonymous User"}</h1>
     </div>
